@@ -3,9 +3,12 @@ import useApiContext from "../contexts/ApiContext";
 import ListGroup from "react-bootstrap/ListGroup";
 
 const Szavak = () => {
-  const { szavak } = useApiContext();
+  const { szavak, eredmeny, setEredmeny } = useApiContext();
   const [valasz, setValasz] = useState("");
 
+  const eredmenySzamol = () => {
+    setEredmeny(eredmeny + 1);
+  };
   return (
     <ListGroup>
       <ListGroup.Item
@@ -16,6 +19,7 @@ const Szavak = () => {
         <div className="cim">MAGYAR</div>
         <div className="cim eredmeny">visszajelzés</div>
       </ListGroup.Item>
+
       {szavak.length > 0
         ? szavak.map((szo) => {
             return (

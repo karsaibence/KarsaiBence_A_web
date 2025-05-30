@@ -6,6 +6,7 @@ export const ApiContext = createContext();
 export const ApiProvider = ({ children }) => {
   const [temak, setTemak] = useState([]);
   const [szavak, setSzavak] = useState([]);
+  const [eredmeny, setEredmeny] = useState(0);
 
   const fetchTemak = async () => {
     const response = await myAxios.get("/tema");
@@ -22,7 +23,9 @@ export const ApiProvider = ({ children }) => {
   }, []);
 
   return (
-    <ApiContext.Provider value={{ temak, szavak, fetchSzavakTemakSzerint }}>
+    <ApiContext.Provider
+      value={{ temak, szavak, fetchSzavakTemakSzerint, setEredmeny, eredmeny }}
+    >
       {children}
     </ApiContext.Provider>
   );
