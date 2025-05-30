@@ -1,11 +1,14 @@
 .lista-elem,
-.cim {
+.cim-sor {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  font-weight: bold;
-  width: 100%;
+  justify-content: space-between ;
 }
+
+.cim {
+  font-weight: bold;
+}
+
 .eredmeny {
   font-style: italic;
   font-weight: 100;

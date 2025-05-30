@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import useApiContext from "../contexts/ApiContext";
-import Szavak from "./Szavak";
 
 const TemaValaszto = () => {
   const { temak, fetchSzavakTemakSzerint } = useApiContext();
@@ -23,7 +22,6 @@ const TemaValaszto = () => {
             ))
           : ""}
       </select>
-      <Szavak />
     </div>
   );
 };
