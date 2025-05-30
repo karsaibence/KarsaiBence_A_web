@@ -1,0 +1,23 @@
+.lista-elem,
+.cim {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  width: 100%;
+}
+.eredmeny {
+  font-style: italic;
+  font-weight: 100;
+}
+
+@media (max-width: 550px) {
+  .lista-elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cim {
+    display: none;
+  }
+}
